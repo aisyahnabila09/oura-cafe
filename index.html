@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OURA - Coffee & Dining Malang</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @keyframes subtle-pulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.05); }
+        }
+        .animate-subtle-pulse {
+            animation: subtle-pulse 6s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-stone-100 text-stone-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- STICKY NAVBAR -->
+    <header class="sticky top-0 z-40 bg-stone-900/90 backdrop-blur-md shadow-lg border-b border-stone-800 text-stone-200 transition-all duration-300">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5">
+            
+            <!-- Logo / Brand -->
+            <a href="#beranda" class="flex items-center gap-2 group">
+                <span class="text-2xl font-black tracking-widest bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent group-hover:from-amber-300 group-hover:to-amber-500 transition">OURA</span>
+                <span class="hidden sm:inline-block text-[11px] font-light text-stone-400 tracking-widest uppercase border-l border-stone-700 pl-2.5">COFFEE & DINING</span>
+            </a>
+
+            <!-- Menu Mobile -->
+            <details class="md:hidden relative">
+                <summary class="list-none cursor-pointer rounded-xl border border-stone-700 px-3.5 py-1.5 text-xs font-semibold text-amber-400 bg-stone-800/80 hover:bg-stone-700 transition flex items-center gap-1.5 shadow-inner">
+                    <span>Menu Navigasi</span>
+                    <span class="text-amber-500">☰</span>
+                </summary>
+                <div class="absolute right-0 mt-3 w-52 rounded-2xl bg-stone-900/95 backdrop-blur-xl p-3 shadow-2xl border border-stone-800 flex flex-col gap-1 text-xs font-medium z-50 text-stone-300 divide-y divide-stone-800/50">
+                    <a href="#menu" class="hover:text-amber-400 py-2 px-2 rounded-lg hover:bg-stone-800/50 transition">Daftar Menu</a>
+                    <a href="#testimoni" class="hover:text-amber-400 py-2 px-2 rounded-lg hover:bg-stone-800/50 transition">Ulasan Pelanggan</a>
+                    <a href="#reservasi" class="hover:text-amber-400 py-2 px-2 rounded-lg hover:bg-stone-800/50 transition">Form Reservasi</a>
+                    <a href="#informasi" class="hover:text-amber-400 py-2 px-2 rounded-lg hover:bg-stone-800/50 transition">Informasi Restoran</a>
+                </div>
+            </details>
+
+            <!-- Menu Desktop -->
+            <nav>
+                <ul class="hidden md:flex space-x-8 text-xs uppercase font-bold tracking-wider text-stone-300 items-center">
+                    <li><a href="#menu" class="hover:text-amber-400 transition-colors">MENU UTAMA</a></li>
+                    <li><a href="#testimoni" class="hover:text-amber-400 transition-colors">ULASAN</a></li>
+                    <li><a href="#informasi" class="hover:text-amber-400 transition-colors">INFORMASI</a></li>
+                    <li>
+                        <a href="#reservasi" class="inline-flex items-center justify-center px-5 py-2 rounded-full text-xs font-bold bg-amber-500 text-stone-900 hover:bg-amber-400 shadow-lg shadow-amber-900/30 active:scale-95 transition">
+                            RESERVASI
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-8 space-y-16">
+
+        <!-- HERO BANNER -->
+        <section id="beranda" class="relative overflow-hidden rounded-3xl bg-stone-900 shadow-2xl border border-stone-800/80">
+            <div class="absolute -top-20 -left-20 w-80 h-80 bg-amber-600/20 rounded-full filter blur-3xl animate-subtle-pulse pointer-events-none"></div>
+            <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-amber-900/30 rounded-full filter blur-3xl animate-subtle-pulse pointer-events-none"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 items-center relative z-10">
+                <div class="md:col-span-7 p-6 sm:p-12 text-stone-100 space-y-6">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 px-3.5 py-1 text-[11px] font-semibold text-amber-400 uppercase tracking-widest backdrop-blur-md">
+                            ★ Premium Culinary Experience
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 text-[11px] font-medium text-emerald-400">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Buka Hari Ini
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none text-white">
+                        OURA <span class="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent font-light">Malang</span>
+                    </h1>
+
+                    <p class="text-xs sm:text-base text-stone-300 leading-relaxed max-w-xl font-light">
+                        Sajian <span class="text-amber-300 font-normal">casual fine dining</span> berkelas dunia yang memadukan keahlian kuliner Western, Coffee, dan cita rasa autentik Nusantara di pusat Kota Malang.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 text-[11px] font-medium pt-1">
+                        <span class="rounded-xl bg-stone-800/80 backdrop-blur-md px-3.5 py-1.5 text-stone-300 border border-stone-700/80">
+                            📍 Oro-oro Dowo, Klojen
+                        </span>
+                        <span class="rounded-xl bg-stone-800/80 backdrop-blur-md px-3.5 py-1.5 text-amber-300 border border-amber-500/30">
+                            🍷 Fine Dining & Specialty Coffee
+                        </span>
+                        <span class="rounded-xl bg-stone-800/80 backdrop-blur-md px-3.5 py-1.5 text-stone-300 border border-stone-700/80">
+                            ⭐ 5.0 (1.2k+ Ulasan)
+                        </span>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="#reservasi" class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-500 px-7 py-3 text-xs font-bold text-white transition-all hover:from-amber-500 hover:to-amber-400 active:scale-95 shadow-lg shadow-amber-900/40">
+                            Pesan Meja Sekarang →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-5 h-72 md:h-full min-h-[360px] relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" 
+                         alt="Interior Oura Cafe Malang" 
+                         class="h-full w-full object-cover object-center transform group-hover:scale-110 transition duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-stone-900 via-stone-900/30 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION MENU UTAMA -->
+        <section id="menu" class="rounded-3xl bg-white p-6 sm:p-10 shadow-sm border border-stone-200/80 space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-stone-100 pb-6">
+                <div>
+                    <h2 class="text-2xl font-black text-stone-900">Katalog Menu OURA</h2>
+                    <p class="text-xs text-stone-500 mt-1">Pilih kategori untuk melihat pilihan menu favorit Anda (Total 15 Menu)</p>
+                </div>
+
+                <!-- Tab Filter Kategori Interaktif -->
+                <div class="flex flex-wrap gap-1.5 rounded-2xl bg-stone-100 p-1.5 text-xs font-semibold text-stone-600 border border-stone-200/60">
+                    <button onclick="filterMenu('all')" id="btn-all" class="tab-btn rounded-xl px-4 py-2 transition text-stone-900 bg-white shadow-sm font-bold">Semua Menu (15)</button>
+                    <button onclick="filterMenu('coffee')" id="btn-coffee" class="tab-btn rounded-xl px-4 py-2 hover:text-stone-900 transition">☕ Coffee (5)</button>
+                    <button onclick="filterMenu('western')" id="btn-western" class="tab-btn rounded-xl px-4 py-2 hover:text-stone-900 transition">🥩 Western (5)</button>
+                    <button onclick="filterMenu('nusantara')" id="btn-nusantara" class="tab-btn rounded-xl px-4 py-2 hover:text-stone-900 transition">🍚 Nusantara (5)</button>
+                </div>
+            </div>
+
+            <!-- Grid Kartu Menu (15 Menu Lengkap) -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                
+                <!-- 1. Butterbeer Coffee (Coffee) -->
+                <article class="menu-item coffee group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" alt="Butterbeer Coffee" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">☕ Coffee</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Butterbeer Coffee</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Single shot espresso dengan racikan butterbeer non-alkohol dan cold foam lembut[span_0](start_span)[span_0](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 40.250</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 2. Spanish Latte OURA (Coffee) -->
+                <article class="menu-item coffee group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=500&q=80" alt="Spanish Latte OURA" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">☕ Coffee</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Spanish Latte OURA</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Espresso berkarakter kuat dipadu susu segar dan sentuhan krimer manis yang gurih[span_1](start_span)[span_1](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 38.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 3. Cappuccino Double Shot (Coffee) -->
+                <article class="menu-item coffee group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=500&q=80" alt="Cappuccino Double Shot" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">☕ Coffee</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Cappuccino Double Shot</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Perpaduan seimbang double shot espresso arabika dan steamed milk bercita rasa kaya[span_2](start_span)[span_2](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 35.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 4. Iced Caramel Macchiato (Coffee) -->
+                <article class="menu-item coffee group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=500&q=80" alt="Iced Caramel Macchiato" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">☕ Coffee</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Iced Caramel Macchiato</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Susu dingin dengan sirup vanilla, espresso, dan saus karamel lezat di atasnya[span_3](start_span)[span_3](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 45.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 5. Affogato Al Caffè (Coffee) -->
+                <article class="menu-item coffee group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=500&q=80" alt="Affogato Al Caffè" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">☕ Coffee</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Affogato Al Caffè</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Satu scoop gelato vanilla lembut disiram espresso pekat yang panas[span_4](start_span)[span_4](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 36.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 6. Pan-Seared Norwegian Salmon (Western) -->
+                <article class="menu-item western group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80" alt="Pan-Seared Norwegian Salmon" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🥩 Western</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Pan-Seared Norwegian Salmon</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Ikan salmon segar dipanggang dengan lemon butter sauce dan mashed potato halus[span_5](start_span)[span_5](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 135.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 7. T-Bone Steak Special (Western) -->
+                <article class="menu-item western group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" alt="T-Bone Steak Special" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🥩 Western</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">T-Bone Steak Special</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Steak impor dipanggang sempurna disajikan dengan mushroom sauce ala Oura[span_6](start_span)[span_6](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 120.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 8. Grilled Wagyu Sirloin MB5 (Western) -->
+                <article class="menu-item western group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=500&q=80" alt="Grilled Wagyu Sirloin MB5" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🥩 Western</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Grilled Wagyu Sirloin MB5</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Daging Wagyu MB5 super lembut disajikan dengan french fries renyah dan saus pilihan[span_7](start_span)[span_7](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 145.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 9. Spaghetti Creamy Carbonara (Western) -->
+                <article class="menu-item western group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=500&q=80" alt="Spaghetti Creamy Carbonara" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🥩 Western</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Spaghetti Creamy Carbonara</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Pasta fettuccine dengan saus krim gurih, smoked beef, dan taburan keju parmesan[span_8](start_span)[span_8](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 65.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 10. OURA Signature Beef Burger (Western) -->
+                <article class="menu-item western group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80" alt="OURA Signature Beef Burger" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🥩 Western</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">OURA Signature Beef Burger</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Juicy beef patty tebal dengan keju cheddar leleh, selada segar, dan saus special Oura[span_9](start_span)[span_9](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 75.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 11. Nasi Goreng Wagyu Rempah (Nusantara) -->
+                <article class="menu-item nusantara group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=500&q=80" alt="Nasi Goreng Wagyu Rempah" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🍚 Nusantara</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Nasi Goreng Wagyu Rempah</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Nasi goreng kaya bumbu rempah dengan potongan daging wagyu lembut dan telur mata sapi[span_10](start_span)[span_10](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 55.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 12. Sop Buntut Bakar Madu (Nusantara) -->
+                <article class="menu-item nusantara group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://tse1.mm.bing.net/th/id/OIP.jxlS7RF0_DLZ-TUh-gdfiQHaFP?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Sop Buntut Bakar Madu" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🍚 Nusantara</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Sop Buntut Bakar Madu</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Buntut sapi dibakar dengan olesan madu lezat, disajikan bersama kuah kaldu rempah hangat[span_11](start_span)[span_11](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 98.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 13. Ayam Goreng Serundeng Lengkuas (Nusantara) -->
+                <article class="menu-item nusantara group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://img-global.cpcdn.com/recipes/8b606890523d31dc/680x482cq70/ayam-goreng-serundeng-lengkuas-foto-resep-utama.jpg" alt="Ayam Goreng Serundeng Lengkuas" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🍚 Nusantara</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Ayam Goreng Serundeng Lengkuas</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Ayam kampung empuk digoreng renyah dengan taburan serundeng lengkuas gurih[span_12](start_span)[span_12](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 52.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 14. Bebek Crispy Sambal Matah Bali (Nusantara) -->
+                <article class="menu-item nusantara group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://i0.wp.com/i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/ed3fc787-6052-4bf4-8391-0d10f92c0c74_IMG_20200516_052813_445.jpg" alt="Bebek Crispy Sambal Matah Bali" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🍚 Nusantara</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Bebek Crispy Sambal Matah Bali</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Bebek goreng renyah di luar gurih di dalam, disajikan bersama sambal matah segar khas Bali[span_13](start_span)[span_13](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 68.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+                <!-- 15. Sate Ayam Sauce Kacang Mede (Nusantara) -->
+                <article class="menu-item nusantara group overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-sm hover:shadow-xl hover:border-amber-400 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden">
+                            <img src="https://assets.kanya.id/crop/0x0:0x0/x/photo/2018/11/15/1410158499.jpg" alt="Sate Ayam Sauce Kacang Mede" class="h-48 w-full object-cover transition duration-700 group-hover:scale-105">
+                            <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-500/30">🍚 Nusantara</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <h3 class="text-base font-bold text-stone-800 group-hover:text-amber-700 transition">Sate Ayam Sauce Kacang Mede</h3>
+                            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed">Daging dada ayam pilihan tanpa lemak dibakar arang dengan siraman saus kacang mede spesial[span_14](start_span)[span_14](end_span).</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0 space-y-3">
+                        <div class="flex items-center justify-between"><span class="text-xs text-stone-400">Harga</span><p class="text-base font-black text-amber-700">Rp 48.000</p></div>
+                        <button class="w-full rounded-xl bg-stone-900 py-2.5 text-xs font-semibold text-white transition hover:bg-amber-600">Detail Menu</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION ULASAN PENGUNJUNG (TESTIMONI) -->
+        <section id="testimoni" class="space-y-8 py-4">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">Ulasan Pengunjung</h2>
+                <p class="text-xs sm:text-sm text-stone-500">Pengalaman berkesan dari para pelanggan setia OURA Malang[span_15](start_span)[span_15](end_span)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimoni 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200/80 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
+                            "Ambience-nya sangat mewah dan nyaman. T-Bone Steak-nya juicy banget, saus jamurnya pas di lidah[span_16](start_span)!"[span_16](end_span)
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">AR</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Anisa Rahma</h4>
+                            <p class="text-[10px] text-stone-400">Google Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200/80 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
+                            "Butterbeer Coffee racikan OURA juara banget sih. Cocok buat nongkrong sore sambil ngerjain tugas.[span_17](start_span)"[span_17](end_span)
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">DF</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Dito Febrian</h4>
+                            <p class="text-[10px] text-stone-400">Food Blogger Malang</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border border-stone-200/80 flex flex-col justify-between space-y-4">
+                    <div class="space-y-3">
+                        <div class="text-amber-400 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed italic">
+                            "Pelayanan ramah banget dan tempatnya sangat luas. Nasi Goreng Wagyu Rempahnya wajib dicoba[span_18](start_span)!"[span_18](end_span)
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-stone-100">
+                        <div class="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">S</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-stone-900">Siti Nurhaliza</h4>
+                            <p class="text-[10px] text-stone-400">Pengunjung Lokal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION FORMULIR RESERVASI MEJA -->
+        <section id="reservasi" class="bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-stone-200/80 space-y-8">
+            <div class="text-center space-y-2 max-w-xl mx-auto">
+                <h2 class="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">Formulir Reservasi Meja</h2>
+                <p class="text-xs sm:text-sm text-stone-500">Silakan lengkapi data untuk memesan tempat eksklusif di OURA Malang[span_19](start_span)[span_19](end_span)</p>
+            </div>
+
+            <form class="space-y-6 max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Nama Lengkap -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Nama Lengkap</label>
+                        <input type="text" placeholder="Masukkan nama lengkap..." class="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-xs text-stone-800 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                    </div>
+
+                    <!-- Email / No WhatsApp -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Email / No. WhatsApp</label>
+                        <input type="text" placeholder="0812xxx atau email@domain.com..." class="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-xs text-stone-800 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Tanggal Reservasi -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Tanggal</label>
+                        <input type="date" class="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-xs text-stone-800 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                    </div>
+
+                    <!-- Jam -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Waktu / Jam</label>
+                        <select class="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-xs text-stone-800 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                            <option>12:00 - Siang</option>
+                            <option>15:00 - Sore (Coffee Time)</option>
+                            <option>18:30 - Makan Malam</option>
+                            <option>20:00 - Malam</option>
+                        </select>
+                    </div>
+
+                    <!-- Jumlah Orang -->
+                    <div class="space-y-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-stone-700">Jumlah Tamu</label>
+                        <select class="w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 py-3 text-xs text-stone-800 focus:outline-none focus:border-amber-500 focus:bg-white transition">
+                            <option>2 Orang (Couple)</option>
+                            <option>4 Orang (Family)</option>
+                            <option>6-10 Orang (Group)</option>
+                            <option>10+ Orang (VIP / Gathering)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pt-4 text-center">
+                    <button type="button" onclick="alert('Terima kasih! Permintaan reservasi Anda telah dikirim.')" class="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 active:scale-95 transition">
+                        Kirim Reservasi Sekarang
+                    </button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- SECTION INFORMASI RESTORAN -->
+    <footer id="informasi" class="mx-auto max-w-6xl px-4 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            <!-- Kotak Informasi Restoran -->
+            <div class="lg:col-span-8 bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-stone-200/80 space-y-6">
+                <div class="flex items-center justify-between border-b border-stone-100 pb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                        <h3 class="text-base font-bold text-stone-900">Informasi Restoran</h3>
+                    </div>
+                    <span class="text-[11px] text-stone-400 font-medium">Terakhir diperbarui 2026</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-stone-50/80 border border-stone-100 rounded-2xl p-4 space-y-1">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-stone-400 block">Alamat Lengkap</span>
+                        <p class="text-xs font-medium text-stone-800 leading-relaxed">
+                            Jl. Pahlawan Trip No.A11, Oro-oro Dowo, Kec. Klojen, Kota Malang
+                        </p>
+                    </div>
+
+                    <div class="bg-stone-50/80 border border-stone-100 rounded-2xl p-4 space-y-1">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-stone-400 block">Jam Operasional</span>
+                        <p class="text-xs font-bold text-stone-800">08:00 - 22:15 WIB</p>
+                        <p class="text-[11px] font-medium text-emerald-600 flex items-center gap-1">✓ Buka Setiap Hari</p>
+                    </div>
+
+                    <div class="bg-stone-50/80 border border-stone-100 rounded-2xl p-4 space-y-1">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-stone-400 block">Kontak Reservasi</span>
+                        <p class="text-xs font-bold text-amber-700">+62 819-9355-6000</p>
+                    </div>
+
+                    <div class="bg-stone-50/80 border border-stone-100 rounded-2xl p-4 space-y-1">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-stone-400 block">Kisaran Harga</span>
+                        <p class="text-xs font-bold text-stone-800">Rp 30.000 - Rp 180.000 <span class="text-[10px] font-normal text-stone-500">/porsi</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kartu Brand / Aksi Cepat -->
+            <div class="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-stone-200/80 flex flex-col items-center justify-between text-center space-y-6">
+                <div class="space-y-3 w-full flex flex-col items-center">
+                    <div class="w-16 h-16 rounded-2xl p-1 bg-stone-100 border border-stone-200 shadow-inner overflow-hidden mb-1">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=200&q=80" alt="Logo Oura" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <h4 class="text-sm font-black text-stone-900 tracking-tight">OURA - Coffee & Dining</h4>
+                    <p class="text-[11px] text-stone-500 font-medium">Coffee • Western • Nusantara</p>
+                </div>
+
+                <div class="w-full space-y-2.5 pt-2">
+                    <a href="https://wa.me/6281993556000" target="_blank" class="w-full flex items-center justify-center gap-2 rounded-xl bg-emerald-600 py-2.5 text-xs font-bold text-white transition hover:bg-emerald-500 shadow-md shadow-emerald-900/10 active:scale-95">
+                        <span>WhatsApp Resmi</span>
+                    </a>
+                    <a href="tel:+6281993556000" class="w-full flex items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white py-2.5 text-xs font-semibold text-stone-700 transition hover:bg-stone-50 active:scale-95">
+                        <span>Telepon Langsung</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center pt-8 text-[11px] text-stone-400 font-light">
+            © 2026 OURA Coffee & Dining. Seluruh Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+    <!-- SCRIPT FILTER MENU INTERAKTIF -->
+    <script>
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('text-stone-900', 'bg-white', 'shadow-sm', 'font-bold');
+                btn.classList.add('hover:text-stone-900');
+            });
+
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.add('text-stone-900', 'bg-white', 'shadow-sm', 'font-bold');
+                activeBtn.classList.remove('hover:text-stone-900');
+            }
+
+            items.forEach(item => {
+                if (category === 'all') {
+                    item.style.display = 'flex';
+                } else {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
